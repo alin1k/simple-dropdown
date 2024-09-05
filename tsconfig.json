@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "ESNext",                         // Modern JavaScript output
+    "module": "ESNext",                         // ES Module system
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],   // Include browser environment
+    "jsx": "react-jsx",                         // Supports the new JSX Transform
+
+    /* Strict Type-Checking Options */
+    "strict": true,                             // Enable all strict type-checking options
+    "noImplicitAny": true,                      // Raise error on expressions and declarations with an implied `any` type
+    "strictNullChecks": true,                   // Ensure `null` and `undefined` are only assignable to themselves
+    "strictFunctionTypes": true,                // Ensure parameters in function types have correct variance
+    "strictBindCallApply": true,                // Ensure `this` is correct in methods
+
+    /* Module Resolution Options */
+    "moduleResolution": "node",                 // Use Node.js module resolution strategy
+    "esModuleInterop": true,                    // Enables ESModule interop between CommonJS and ES Modules
+    "resolveJsonModule": true,                  // Allows importing JSON files
+    "allowSyntheticDefaultImports": true,       // Enables default import syntax for modules without a default export
+
+    /* Paths */
+    "baseUrl": "./",                            // Base directory for resolving paths
+    "paths": {
+      "@components/*": ["src/components/*"],    // Alias for component directory
+      "@utils/*": ["src/utils/*"]               // Alias for utility functions
+    },
+
+    /* Additional Options */
+    "skipLibCheck": true,                       // Skip checking declaration files for faster builds
+    "forceConsistentCasingInFileNames": true,   // Ensure file imports are case-sensitive
+
+    /* Emit Options */
+    "declaration": true,                        // Generate `.d.ts` declaration files
+    "declarationDir": "types",                  // Output declaration files in `types/` folder
+    "outDir": "dist",                           // Transpiled output directory
+    "sourceMap": true,                          // Include source maps for debugging
+
+    /* Tailwind CSS-related Settings */
+    "types": ["@types/react", "@types/node"],   // Include necessary type definitions
+
+    /* Experimental Options */
+    "experimentalDecorators": true,             // Enable experimental decorator support
+    "emitDecoratorMetadata": true               // Emit metadata for decorators
+  },
+  "include": ["src"],                           // Include the `src` directory for type-checking
+  "exclude": ["node_modules", "dist", "types"]  // Exclude unnecessary files
+}
