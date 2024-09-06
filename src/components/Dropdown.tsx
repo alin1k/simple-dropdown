@@ -5,7 +5,7 @@ import {useClickOutsideHandler} from '../hooks';
 
 export const DropdownContext = createContext<any>(null);
 
-export default function DropdownMenu({children} : {children: React.ReactNode}) {
+export default function Dropdown({children} : {children: React.ReactNode}) {
 
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
