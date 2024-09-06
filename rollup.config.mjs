@@ -4,9 +4,8 @@ import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import postcss from 'rollup-plugin-postcss';
 import terser from '@rollup/plugin-terser';
-
-const tailwindcss = await import('tailwindcss');
-const autoprefixer = await import('autoprefixer');
+import tailwindcss from 'tailwindcss'
+import autoprefixer from 'autoprefixer';
 
 export default {
   input: 'src/index.ts', // Your library's entry point
@@ -31,7 +30,7 @@ export default {
     postcss({
       extract: true,
       minimize: true,
-      plugins: [tailwindcss.default, autoprefixer.default],
+      plugins: [tailwindcss, autoprefixer],
     }), // PostCSS with Tailwind CSS and Autoprefixer
   ],
   external: ['react', 'react-dom'], // Exclude React from the bundle

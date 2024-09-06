@@ -1,3 +1,5 @@
+import "./index.css"
+
 export * from "./components/Dropdown"
 export * from "./components/DropdownLabel"
 export * from "./components/DropdownMenu"

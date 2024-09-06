@@ -1,6 +1,6 @@
 {
   "name": "alin-simple-dropdown",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "A simple Dropdown React component",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
