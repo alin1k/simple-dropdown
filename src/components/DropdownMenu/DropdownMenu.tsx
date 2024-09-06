@@ -1,7 +1,7 @@
 import { useContext } from "react"
-import { DropdownContext } from "./Dropdown"
+import { DropdownContext } from "../Dropdown"
 
-export default function DropdownMenu({children} : {children: React.ReactNode}) {
+export function DropdownMenu({children} : {children: React.ReactNode}) {
 
   const {isOpen, dropdownRef} = useContext(DropdownContext)
 

@@ -1,17 +1,27 @@
 {
-  "name": "simple-dropdown",
+  "name": "alin-simple-dropdown",
   "version": "1.0.0",
   "description": "A simple Dropdown React component",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alin1k/simple-dropdown"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build-lib": "rollup -c"
   },
   "author": "Alin Olteanu",
   "license": "MIT",
   "devDependencies": {
     "@chromatic-com/storybook": "^1.8.0",
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@storybook/addon-essentials": "^8.2.9",
     "@storybook/addon-interactions": "^8.2.9",
     "@storybook/addon-links": "^8.2.9",
@@ -27,6 +37,9 @@
     "postcss": "^8.4.45",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "rollup": "^4.21.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
     "storybook": "^8.2.9",
     "tailwindcss": "^3.4.10",
     "typescript": "^5.5.4"

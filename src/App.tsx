@@ -1,7 +1,4 @@
-import DropdownLabel from './components/DropdownLabel'
-import Dropdown from './components/Dropdown'
-import DropdownMenu from './components/DropdownMenu'
-import DropdownButton from './components/DropdownButton'
+import { Dropdown, DropdownLabel, DropdownMenu, DropdownButton } from "./index"
 
 function App() {
   return (
