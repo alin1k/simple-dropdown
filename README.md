@@ -12,12 +12,16 @@ simple-dropdown is a React component library that offers a simple Dropdown menu.
 
 ## Installation
 
-Not yet available
+Install the library using npm
+
+``` bash
+npm install alin-simple-dropdown
+```
     
 ## Usage/Examples
 
 ```javascript
-import { Dropdown, DropdownLabel, DropdownMenu, DropdownButton } from 'simple-dropdown'
+import { Dropdown, DropdownLabel, DropdownMenu, DropdownButton } from 'alin-simple-dropdown'
 
 function App() {
   return (
