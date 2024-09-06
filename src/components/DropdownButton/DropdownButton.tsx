@@ -1,7 +1,7 @@
 import { useContext } from "react"
-import { DropdownContext } from "./Dropdown"
+import { DropdownContext } from "../Dropdown"
 
-export default function DropdownButton({children, clickEvent} : {children: string, clickEvent: ()=>any}) {
+export function DropdownButton({children, clickEvent} : {children: string, clickEvent: ()=>any}) {
 
   const {setIsOpen} = useContext(DropdownContext);
 

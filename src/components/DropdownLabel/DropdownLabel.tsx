@@ -1,7 +1,7 @@
 import { useContext } from "react"
-import { DropdownContext } from "./Dropdown"
+import { DropdownContext } from "../Dropdown"
 
-export default function DropdownLabel({children} : {children: string}) {
+export function DropdownLabel({children} : {children: string}) {
 
   const {buttonRef, toggleDropdown} = useContext(DropdownContext)
 

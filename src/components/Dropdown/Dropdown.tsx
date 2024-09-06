@@ -1,11 +1,11 @@
-import "../index.css"
+import "../../index.css"
 
 import { useState, useRef, createContext } from 'react';
-import {useClickOutsideHandler} from '../hooks';
+import {useClickOutsideHandler} from '../../hooks';
 
 export const DropdownContext = createContext<any>(null);
 
-export default function Dropdown({children} : {children: React.ReactNode}) {
+export function Dropdown({children} : {children: React.ReactNode}) {
 
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
