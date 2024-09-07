@@ -4,7 +4,6 @@
 <div>
   <img src='https://img.shields.io/badge/License-MIT-green.svg'>
   <img src='https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square'>
-  <img src='https://img.shields.io/badge/tailwindcss-0F172A?&logo=tailwindcss'>
 </div>
 
 
@@ -62,7 +61,7 @@ Start Storybook
   npm run storybook
 ```
 
-Edit `App.tsx` to see the changes
+Edit `src/App.tsx` to see the changes
 
 
 
