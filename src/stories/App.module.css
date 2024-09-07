@@ -1,0 +1,36 @@
+.examples{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.section{
+  border: 1px solid rgb(194, 192, 192);
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  height: 10rem;
+  width: 20rem;
+}
+
+.section1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section2{
+  display: flex;
+  justify-content: end;
+}
+
+.section3{
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+.section4{
+  display: flex;
+  justify-content: start;
+  align-items: end;
+}
