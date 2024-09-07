@@ -1,11 +1,36 @@
-.dropdownLabel{
-  padding: 0.5rem 1rem;
+.light{
   background-color: white;
-  border: 1px solid rgb(194, 192, 192);
+  color: #292929;
+  border: 1px solid #c2c0c0;
+}
+
+.light:hover{
+  background-color: #ebeaea;
+}
+
+.dark{
+  background-color: #292929;
+  color: white;
+  border: 1px solid #999999;
+}
+
+.dark:hover{
+  background-color: #3a3a3a;
+}
+
+.sm{
+  padding: 0.5rem 1rem;
   border-radius: 0.3rem;
 }
 
-.dropdownLabel:hover{
-  cursor: pointer;
-  background-color: rgb(235, 234, 234);
+.md{
+  font-size: 15px;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.4rem;
+}
+
+.xl{
+  font-size: 16px;
+  padding: 0.60rem 1.5rem;
+  border-radius: 0.5rem;
 }
