@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import { DropdownContext } from "../Dropdown"
+import styles from "./DropdownLabel.module.css"
 
 export function DropdownLabel({children} : {children: string}) {
 
@@ -9,7 +10,7 @@ export function DropdownLabel({children} : {children: string}) {
     <button
       ref={buttonRef}
       onClick={toggleDropdown}
-      className="p-1 px-2 bg-white border rounded-md hover:bg-gray-100 focus:outline-none"
+      className={styles.dropdownLabel}
     >
       {children}
     </button>

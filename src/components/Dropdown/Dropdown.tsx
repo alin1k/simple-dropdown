@@ -1,7 +1,6 @@
-import "../../index.css"
-
 import { useState, useRef, createContext } from 'react';
 import {useClickOutsideHandler} from '../../hooks';
+import styles from "./Dropdown.module.css"
 
 export const DropdownContext = createContext<any>(null);
 
@@ -19,7 +18,7 @@ export function Dropdown({children} : {children: React.ReactNode}) {
 
   return (
     <DropdownContext.Provider value={{isOpen, setIsOpen, dropdownRef, buttonRef, toggleDropdown}}>
-      <div className="relative inline-block">
+      <div className={styles.dropdown}>
         {children}
       </div>
     </DropdownContext.Provider>
