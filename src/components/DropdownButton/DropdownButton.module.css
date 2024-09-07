@@ -1,0 +1,14 @@
+.dropdownButton{
+  display: block;
+  width: 100%;
+  padding: 0.50rem 2rem;
+  background-color: transparent;
+  border: 0;
+}
+
+.dropdownButton:hover{
+  cursor: pointer;
+  background-color: rgb(235, 234, 234);
+}
+
+/* className="block w-full px-7 py-2 text-sm hover:bg-gray-100 focus:outline-none" */
