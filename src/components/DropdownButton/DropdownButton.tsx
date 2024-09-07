@@ -2,9 +2,11 @@ import { useContext } from "react"
 import { DropdownContext } from "../Dropdown"
 import styles from "./DropdownButton.module.css"
 
-export function DropdownButton({children, clickEvent} : {children: string, clickEvent: ()=>any}) {
+export function DropdownButton({children, clickEvent} : {children: string, clickEvent?: ()=>any }) {
 
   const {setIsOpen} = useContext(DropdownContext);
+
+  const handleClick = clickEvent ?? (() => {});
 
   return (
     <button
@@ -12,7 +14,7 @@ export function DropdownButton({children, clickEvent} : {children: string, click
       className={styles.dropdownButton}
       onClick={() => {
         setIsOpen(false);
-        clickEvent();
+        handleClick();
       }}
     >
       {children}
