@@ -1,7 +1,6 @@
 .dropdownButton{
   display: block;
   width: 100%;
-  padding: 0.50rem 2rem;
   background-color: transparent;
   border: 0;
 }
@@ -11,4 +10,55 @@
   background-color: rgb(235, 234, 234);
 }
 
-/* className="block w-full px-7 py-2 text-sm hover:bg-gray-100 focus:outline-none" */
+.light{
+  color: #292929;
+}
+
+.dark{
+  color: white;
+}
+
+.light:hover{
+  background-color: #ebeaea;
+}
+.dark:hover{
+  background-color: #3a3a3a;
+}
+
+.sm{
+  padding: 0.5rem 2rem;
+}
+
+.sm:first-child{
+  border-radius: 0.3rem 0.3rem 0 0 ;
+}
+
+.sm:last-child{
+  border-radius: 0 0 0.3rem 0.3rem ;
+}
+
+.md{
+  font-size: 15px;
+  padding: 0.5rem 2.25rem;
+}
+
+.md:first-child{
+  border-radius: 0.4rem 0.4rem 0 0 ;
+}
+
+.md:last-child{
+  border-radius: 0 0 0.4rem 0.4rem ;
+}
+
+.xl{
+  font-size: 16px;
+  padding: 0.60rem 2.5rem;
+}
+
+.xl:first-child{
+  border-radius: 0.5rem 0.5rem 0 0 ;
+}
+
+.xl:last-child{
+  border-radius: 0 0 0.5rem 0.5rem ;
+}

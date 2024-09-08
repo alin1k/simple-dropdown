@@ -9,7 +9,7 @@ const meta = {
   component: DropdownMenu,
   render: ({...args})=>(
     <Dropdown>
-      <DropdownLabel variant={args.variant}>Click me!</DropdownLabel>
+      <DropdownLabel variant={args.variant} size={args.size}>Click me!</DropdownLabel>
       <DropdownMenu {...args}>
         <DropdownButton>Button1</DropdownButton>
         <DropdownButton>Button2</DropdownButton>

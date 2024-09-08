@@ -16,14 +16,14 @@ export function DropdownMenu(
   const {isOpen, dropdownRef} = useContext(DropdownContext)
 
   return isOpen && (
-    <div
+    <DropdownMenuTheme.Provider value={{variant, size}}>
+      <div
       ref={dropdownRef}
       className={`${styles.dropdownMenu} ${styles[variant]} ${styles[size]} ${className}`}
-    >
-      <DropdownMenuTheme.Provider value={{variant, size}}>
+      >
         {children}
-      </DropdownMenuTheme.Provider>
-    </div>
+      </div>
+    </DropdownMenuTheme.Provider>
   )
 }
 
