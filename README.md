@@ -2,6 +2,7 @@
 # simple-dropdown
 
 <div>
+  <img src='https://img.shields.io/npm/v/alin-simple-dropdown'>
   <img src='https://img.shields.io/badge/License-MIT-green.svg'>
   <img src='https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square'>
 </div>
