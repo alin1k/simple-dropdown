@@ -1,18 +1,28 @@
-import { useContext } from "react"
+import { createContext, useContext } from "react"
 import { DropdownContext } from "../Dropdown"
 import styles from "./DropdownMenu.module.css";
+import { IDropdownMenu } from "src/types/types";
 
-export function DropdownMenu({children} : {children: React.ReactNode}) {
+export const DropdownMenuTheme = createContext<{variant: string, size: string}>({variant: '', size: ''});
+
+export function DropdownMenu(
+  {
+    children,
+    className,
+    variant="light",
+    size="sm"
+  } : IDropdownMenu) {
 
   const {isOpen, dropdownRef} = useContext(DropdownContext)
 
   return isOpen && (
     <div
       ref={dropdownRef}
-      // className="absolute left-0 mt-1 w-32 rounded-md shadow-lg bg-white border z-10"
-      className={styles.dropdownMenu}
+      className={`${styles.dropdownMenu} ${styles[variant]} ${styles[size]} ${className}`}
     >
-      {children}
+      <DropdownMenuTheme.Provider value={{variant, size}}>
+        {children}
+      </DropdownMenuTheme.Provider>
     </div>
   )
 }
