@@ -32,7 +32,8 @@
 
     /* Emit Options */
     "declaration": true,                        // Generate `.d.ts` declaration files
-    "declarationDir": "types",                  // Output declaration files in `types/` folder
+    "emitDeclarationOnly": true,
+    "skipDefaultLibCheck": true,
     "outDir": "dist",                           // Transpiled output directory
     "sourceMap": true,                          // Include source maps for debugging
 
