@@ -1,8 +1,9 @@
 {
   "name": "alin-simple-dropdown",
-  "version": "1.0.10",
+  "version": "1.1.2",
   "description": "A simple Dropdown React component",
   "main": "dist/index.js",
+  "types" : "dist/index.d.ts",
   "module": "dist/index.esm.js",
   "repository": {
     "type": "git",
@@ -44,7 +45,7 @@
     "typescript": "^5.5.4"
   },
   "peerDependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react": "^18",
+    "react-dom": "^18"
   }
 }
