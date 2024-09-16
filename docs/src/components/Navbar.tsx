@@ -29,10 +29,6 @@ export default function Navbar() {
               <Home className='size-4 me-2'/>
               <span>Home</span>
             </DropdownMenuItem>
-            <DropdownMenuItem onClick={()=> router.replace("/installation")}>
-              <FolderDown className='size-4 me-2'/>
-              <span>Installation</span>
-            </DropdownMenuItem>
             <DropdownMenuItem onClick={()=> router.replace("/docs")}>
               <Book className='size-4 me-2'/>
               <span>Docs</span>
@@ -42,7 +38,6 @@ export default function Navbar() {
       </div>
       <div className='gap-5 hidden md:flex'>
         <Link href={"/"} className='font-bold'>alin-simple-dropdown</Link>
-        <Link href={'/installation'} className={`${path === '/installation'? 'font-bold' : 'text-zinc-500'} hover:text-primary`}>Installation</Link>
         <Link href={"/docs"} className={`${path === '/docs'? 'font-bold' : 'text-zinc-500'} hover:text-primary`}>Docs</Link>
       </div>
       <div className='flex gap-2 items-center'>
