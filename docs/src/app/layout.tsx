@@ -1,6 +1,7 @@
 import { ThemeProvider } from "@/components/theme-provider"
 import "./index.css"
 import Navbar from "@/components/Navbar"
+import { Toaster } from "@/components/ui/toaster"
 
 export const metadata = {
   title: 'Docs - simple-dropdown',
@@ -23,10 +24,11 @@ export default function RootLayout({
         >
           <main className="flex flex-col min-h-screen h-full">
             <Navbar/>
-            <div className="flex-1 flex flex-col">
+            <div className="flex-1 flex flex-col p-4">
               {children}
             </div>
           </main>
+          <Toaster/>
         </ThemeProvider>
       </body>
     </html>
