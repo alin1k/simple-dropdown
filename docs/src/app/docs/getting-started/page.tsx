@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function InstallationPage() {
   return (
-    <div className='p-2 flex flex-col gap-8 self-center'>
+    <div className='p-2 flex flex-col gap-8'>
       <div>
         <h1 className='text-5xl font-bold mb-3'>Getting started</h1>
         <p><span className='font-semibold'>alin-simple-dropdown</span> is a React component library that offers a easy to use Dropdown menu for your applications</p>
