@@ -4,7 +4,7 @@ import React from 'react'
 import DarkmodeButton from "@/components/DarkmodeButton"
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
-import { Menu, FolderDown, Book, Home} from 'lucide-react'
+import { Menu, Book, Home } from 'lucide-react'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from './ui/dropdown-menu'
 import GitHubIcon from './icons/GitHubIcon'
 
@@ -21,24 +21,33 @@ export default function Navbar() {
             <Menu onClick={()=>{console.log("Hi")}} className='hover:cursor-pointer me-2'/>
           </DropdownMenuTrigger>
           <DropdownMenuContent className='ms-2'>
-            <DropdownMenuLabel>
+            <DropdownMenuLabel onClick={()=> router.replace("/")} className='hover:cursor-pointer'>
               <h1 className='font-bold'>alin-simple-dropdown</h1>
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
-            <DropdownMenuItem onClick={()=> router.replace("/")}>
-              <Home className='size-4 me-2'/>
-              <span>Home</span>
-            </DropdownMenuItem>
-            <DropdownMenuItem onClick={()=> router.replace("/docs")}>
+            <DropdownMenuItem onClick={()=> router.replace("/docs/getting-started")}>
               <Book className='size-4 me-2'/>
-              <span>Docs</span>
+              <span>Getting started</span>
+            </DropdownMenuItem>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem onClick={()=> router.replace("/docs/getting-started")}>
+              <span>Dropdown</span>
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={()=> router.replace("/docs/getting-started")}>
+              <span>DropdownLabel</span>
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={()=> router.replace("/docs/getting-started")}>
+              <span>DropdownMenu</span>
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={()=> router.replace("/docs/getting-started")}>
+              <span>DropdownButton</span>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
       <div className='gap-5 hidden md:flex'>
         <Link href={"/"} className='font-bold'>alin-simple-dropdown</Link>
-        <Link href={"/docs"} className={`${path === '/docs'? 'font-bold' : 'text-zinc-500'} hover:text-primary`}>Docs</Link>
+        <Link href={"/docs/getting-started"} className={`${path.includes("/docs") ? 'font-bold' : 'text-zinc-500'} hover:text-primary`}>Docs</Link>
       </div>
       <div className='flex gap-2 items-center'>
         <Link href="https://github.com/alin1k/simple-dropdown" target='_blank' className='p-1 rounded-lg hover:bg-primary-foreground'>
