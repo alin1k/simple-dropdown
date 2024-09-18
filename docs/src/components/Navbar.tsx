@@ -30,16 +30,16 @@ export default function Navbar() {
               <span>Getting started</span>
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem onClick={()=> router.replace("/docs/getting-started")}>
+            <DropdownMenuItem onClick={()=> router.replace("/docs/dropdown")}>
               <span>Dropdown</span>
             </DropdownMenuItem>
-            <DropdownMenuItem onClick={()=> router.replace("/docs/getting-started")}>
+            <DropdownMenuItem onClick={()=> router.replace("/docs/dropdown-label")}>
               <span>DropdownLabel</span>
             </DropdownMenuItem>
-            <DropdownMenuItem onClick={()=> router.replace("/docs/getting-started")}>
+            <DropdownMenuItem onClick={()=> router.replace("/docs/dropdown-menu")}>
               <span>DropdownMenu</span>
             </DropdownMenuItem>
-            <DropdownMenuItem onClick={()=> router.replace("/docs/getting-started")}>
+            <DropdownMenuItem onClick={()=> router.replace("/docs/dropdown-button")}>
               <span>DropdownButton</span>
             </DropdownMenuItem>
           </DropdownMenuContent>

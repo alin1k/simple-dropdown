@@ -1,4 +1,7 @@
+'use client'
+
 import Code from '@/components/ui/code'
+import { Dropdown, DropdownButton, DropdownLabel, DropdownMenu } from 'alin-simple-dropdown'
 import React from 'react'
 
 export default function InstallationPage() {
@@ -28,8 +31,18 @@ export default function InstallationPage() {
   </DropdownMenu>
 </Dropdown>`}
         </Code>
-
         <p className='my-2'><span className='text-red-500 font-bold'>IMPORTANT!</span> If your are using NextJS, make sure you add <span className='font-bold'>'use client'</span></p>
+
+      </div>
+      <div className="self-center mb-32">
+        <Dropdown>
+          <DropdownLabel>Click me!</DropdownLabel>
+          <DropdownMenu>
+            <DropdownButton>Button 1</DropdownButton>
+            <DropdownButton>Button 2</DropdownButton>
+            <DropdownButton>Button 3</DropdownButton>
+          </DropdownMenu>
+        </Dropdown>
       </div>
     </div>
   )
