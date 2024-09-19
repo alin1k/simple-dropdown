@@ -21,41 +21,46 @@ export default function DropdownLabelPage() {
               <TableHead>Type</TableHead>
               <TableHead>Default</TableHead>
               <TableHead>Values</TableHead>
+              <TableHead>Required</TableHead>
               <TableHead>Description</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             <TableRow>
-              <TableCell>variant</TableCell>
+              <TableCell><code className='bg-secondary px-1 rounded'>variant</code></TableCell>
               <TableCell>string</TableCell>
               <TableCell>light</TableCell>
               <TableCell>light,dark</TableCell>
+              <TableCell>No</TableCell>
               <TableCell>Dropdown label color</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>size</TableCell>
+              <TableCell><code className='bg-secondary px-1 rounded'>size</code></TableCell>
               <TableCell>string</TableCell>
               <TableCell>sm</TableCell>
               <TableCell>sm,md,xl</TableCell>
+              <TableCell>No</TableCell>
               <TableCell>Dropdown label size</TableCell>
             </TableRow>
           </TableBody>
         </Table>
       </div>
-      <div>
-        <h1 className='text-3xl font-bold mb-3'>Customization</h1>
+      <div className='flex flex-col'>
+        <h1 className='text-3xl font-bold mb-3'>Examples</h1>
         <p>You can customize the dropdown label using <code className='bg-secondary px-1 rounded'>size</code> and <code className='bg-secondary px-1 rounded'>variant</code> props</p>
         <p className='mt-2'><code className='bg-secondary px-1 rounded'>variant</code> prop:</p>
         <Code>
           {`<DropdownLabel variant='dark'>Click me</DropdownLabel>`}
         </Code>
-        <Code>
-          {`<DropdownLabel variant='light'>Click me</DropdownLabel>`}
-        </Code>
-        <div className='flex gap-4 mt-4'>
+        <div className="py-3 self-center">
           <Dropdown>
             <DropdownLabel variant='dark'>Click me</DropdownLabel>
           </Dropdown>
+        </div>
+        <Code>
+          {`<DropdownLabel variant='light'>Click me</DropdownLabel>`}
+        </Code>
+        <div className="py-3 self-center">
           <Dropdown>
             <DropdownLabel variant='light'>Click me</DropdownLabel>
           </Dropdown>
@@ -72,7 +77,7 @@ export default function DropdownLabelPage() {
           {`<DropdownLabel size='xl'>Click me</DropdownLabel>`}
         </Code>
         <div className='flex gap-4 mt-4'>
-          <Dropdown>
+          {/* <Dropdown>
             <DropdownLabel size='sm'>sm</DropdownLabel>
           </Dropdown>
           <Dropdown>
@@ -80,7 +85,7 @@ export default function DropdownLabelPage() {
           </Dropdown>
           <Dropdown>
             <DropdownLabel size='xl'>xl</DropdownLabel>
-          </Dropdown>
+          </Dropdown> */}
         </div>
       </div>
     </div>

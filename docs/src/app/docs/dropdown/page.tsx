@@ -6,7 +6,7 @@ export default function DropdownPage() {
     <div className='p-2 flex flex-col gap-8'>
       <div>
         <h1 className='text-5xl font-bold mb-3'>Dropdown component</h1>
-        <p>This is the main component of the dropdown menu</p>
+        <p>This is the main component of the dropdown menu that wraps all the other components</p>
       </div>
       <div>
         <h1 className='text-3xl font-bold mb-3'>Usage</h1>
