@@ -3,9 +3,11 @@ import Sidebar from './_components/Sidebar'
 
 export default function DocsLayout({children} : {children: React.ReactNode}) {
   return (
-    <div className='w-full flex px-6'>
+    <div className='w-full flex md:px-6'>
       <Sidebar/>
-      {children}
+      <div className="w-full md:w-10/12 lg:w-8/12">
+        {children}
+      </div>
     </div>
   )
 }
