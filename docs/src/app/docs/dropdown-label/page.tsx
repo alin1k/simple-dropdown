@@ -77,7 +77,7 @@ export default function DropdownLabelPage() {
           {`<DropdownLabel size='xl'>Click me</DropdownLabel>`}
         </Code>
         <div className='flex gap-4 mt-4'>
-          {/* <Dropdown>
+          <Dropdown>
             <DropdownLabel size='sm'>sm</DropdownLabel>
           </Dropdown>
           <Dropdown>
@@ -85,7 +85,7 @@ export default function DropdownLabelPage() {
           </Dropdown>
           <Dropdown>
             <DropdownLabel size='xl'>xl</DropdownLabel>
-          </Dropdown> */}
+          </Dropdown>
         </div>
       </div>
     </div>
