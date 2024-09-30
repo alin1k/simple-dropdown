@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { DropdownContext } from "../Dropdown"
+import { DropdownContext, DropdownThemeContext } from "../Dropdown"
 import styles from "./DropdownLabel.module.css"
 
 import { IDropdownLabel } from "src/types/types"
@@ -8,11 +8,15 @@ export function DropdownLabel(
   {
     children,
     className,
-    variant = "light",
-    size = "sm"
+    variant,
+    size
   } : IDropdownLabel) {
 
-  const {buttonRef, toggleDropdown} = useContext(DropdownContext)
+  const {buttonRef, toggleDropdown} = useContext(DropdownContext);
+  const dropdownTheme = useContext(DropdownThemeContext);
+
+  variant = variant ?? dropdownTheme.variant;
+  size = size ?? dropdownTheme.size;
 
   return (
     <button

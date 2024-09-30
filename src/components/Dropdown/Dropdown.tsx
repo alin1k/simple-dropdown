@@ -1,10 +1,18 @@
 import { useState, useRef, createContext } from 'react';
 import {useClickOutsideHandler} from '../../hooks';
 import styles from "./Dropdown.module.css"
+import { IDropdown, sizeType, variantType } from 'src/types/types';
 
 export const DropdownContext = createContext<any>(null);
+export const DropdownThemeContext = createContext<{variant: variantType, size: sizeType}>({variant: 'light', size: 'sm'})
 
-export function Dropdown({children} : {children: React.ReactNode}) {
+export function Dropdown(
+  {
+    children,
+    className,
+    variant="light",
+    size="sm"
+  } : IDropdown) {
 
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -18,9 +26,11 @@ export function Dropdown({children} : {children: React.ReactNode}) {
 
   return (
     <DropdownContext.Provider value={{isOpen, setIsOpen, dropdownRef, buttonRef, toggleDropdown}}>
-      <div className={styles.dropdown}>
-        {children}
-      </div>
+      <DropdownThemeContext.Provider value={{variant, size}}>
+        <div className={`${styles.dropdown} ${className}`}>
+          {children}
+        </div>
+      </DropdownThemeContext.Provider>
     </DropdownContext.Provider>
   );
 }
