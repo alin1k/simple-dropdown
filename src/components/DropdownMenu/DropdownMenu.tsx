@@ -13,7 +13,7 @@ export function DropdownMenu(
     size
   } : IDropdownMenu) {
 
-  const {isOpen, dropdownRef} = useContext(DropdownContext);
+  const {isOpen, setIsOpen, dropdownRef, showOnHover} = useContext(DropdownContext);
   const dropdownTheme = useContext(DropdownThemeContext);
 
   variant = variant ?? dropdownTheme.variant;
@@ -24,6 +24,11 @@ export function DropdownMenu(
       <div
       ref={dropdownRef}
       className={`${styles.dropdownMenu} ${styles[variant]} ${styles[size]} ${className}`}
+      onMouseLeave={()=>{
+        if(showOnHover){
+          setIsOpen(false);
+        }
+      }}
       >
         {children}
       </div>

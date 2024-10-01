@@ -12,7 +12,7 @@ export function DropdownLabel(
     size
   } : IDropdownLabel) {
 
-  const {buttonRef, toggleDropdown} = useContext(DropdownContext);
+  const {buttonRef, toggleDropdown, showOnHover} = useContext(DropdownContext);
   const dropdownTheme = useContext(DropdownThemeContext);
 
   variant = variant ?? dropdownTheme.variant;
@@ -21,7 +21,11 @@ export function DropdownLabel(
   return (
     <button
       ref={buttonRef}
-      onClick={toggleDropdown}
+      onClick={()=>{
+        if(!showOnHover){
+          toggleDropdown()
+        }
+      }}
       className={`${styles[variant]} ${styles[size]} ${className}`}
     >
       {children}
