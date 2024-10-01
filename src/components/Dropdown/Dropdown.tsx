@@ -1,4 +1,4 @@
-import { useState, useRef, createContext } from 'react';
+import { useState, useRef, createContext, useEffect } from 'react';
 import {useClickOutsideHandler} from '../../hooks';
 import styles from "./Dropdown.module.css"
 import { IDropdown, sizeType, variantType } from 'src/types/types';
@@ -11,7 +11,8 @@ export function Dropdown(
     children,
     className,
     variant="light",
-    size="sm"
+    size="sm",
+    showOnHover = false
   } : IDropdown) {
 
   const [isOpen, setIsOpen] = useState(false);
@@ -25,9 +26,16 @@ export function Dropdown(
   useClickOutsideHandler({dropdownRef, buttonRef, setIsOpen})
 
   return (
-    <DropdownContext.Provider value={{isOpen, setIsOpen, dropdownRef, buttonRef, toggleDropdown}}>
+    <DropdownContext.Provider value={{isOpen, setIsOpen, dropdownRef, buttonRef, toggleDropdown, showOnHover}}>
       <DropdownThemeContext.Provider value={{variant, size}}>
-        <div className={`${styles.dropdown} ${className}`}>
+        <div 
+          className={`${styles.dropdown} ${className}`}
+          onMouseEnter={()=>{
+            if(showOnHover){
+              setIsOpen(true);
+            }
+          }}
+        >
           {children}
         </div>
       </DropdownThemeContext.Provider>
