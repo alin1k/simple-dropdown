@@ -28,7 +28,7 @@ export default function DropdownPage() {
               <TableCell><code className='bg-secondary px-1 rounded'>variant</code></TableCell>
               <TableCell>string</TableCell>
               <TableCell>light</TableCell>
-              <TableCell>light,dark</TableCell>
+              <TableCell>light, dark</TableCell>
               <TableCell>No</TableCell>
               <TableCell>Dropdown color</TableCell>
             </TableRow>
@@ -36,9 +36,17 @@ export default function DropdownPage() {
               <TableCell><code className='bg-secondary px-1 rounded'>size</code></TableCell>
               <TableCell>string</TableCell>
               <TableCell>sm</TableCell>
-              <TableCell>sm,md,xl</TableCell>
+              <TableCell>sm, md, xl</TableCell>
               <TableCell>No</TableCell>
               <TableCell>Dropdown size</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell><code className='bg-secondary px-1 rounded'>showOnHover</code></TableCell>
+              <TableCell>boolean</TableCell>
+              <TableCell>false</TableCell>
+              <TableCell>true, false</TableCell>
+              <TableCell>No</TableCell>
+              <TableCell>Determies if the dropdown menu should open on hover</TableCell>
             </TableRow>
           </TableBody>
         </Table>
