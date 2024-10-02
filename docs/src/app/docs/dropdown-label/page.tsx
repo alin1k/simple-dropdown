@@ -30,7 +30,7 @@ export default function DropdownLabelPage() {
               <TableCell><code className='bg-secondary px-1 rounded'>variant</code></TableCell>
               <TableCell>string</TableCell>
               <TableCell>light</TableCell>
-              <TableCell>light,dark</TableCell>
+              <TableCell>light, dark</TableCell>
               <TableCell>No</TableCell>
               <TableCell>Dropdown label color</TableCell>
             </TableRow>
@@ -38,7 +38,7 @@ export default function DropdownLabelPage() {
               <TableCell><code className='bg-secondary px-1 rounded'>size</code></TableCell>
               <TableCell>string</TableCell>
               <TableCell>sm</TableCell>
-              <TableCell>sm,md,xl</TableCell>
+              <TableCell>sm, md, xl</TableCell>
               <TableCell>No</TableCell>
               <TableCell>Dropdown label size</TableCell>
             </TableRow>
