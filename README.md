@@ -10,9 +10,6 @@
 
 simple-dropdown is a React component library that offers a simple Dropdown menu.
 
-> [!IMPORTANT]
-> Documentation is currently being worked on.
-
 ## Installation
 
 Install the library using npm
