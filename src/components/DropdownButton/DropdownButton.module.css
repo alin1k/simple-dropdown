@@ -31,11 +31,13 @@
 }
 
 .sm:first-child{
-  border-radius: 0.3rem 0.3rem 0 0 ;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
 }
 
 .sm:last-child{
-  border-radius: 0 0 0.3rem 0.3rem ;
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
 }
 
 .md{
@@ -44,11 +46,13 @@
 }
 
 .md:first-child{
-  border-radius: 0.4rem 0.4rem 0 0 ;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
 }
 
 .md:last-child{
-  border-radius: 0 0 0.4rem 0.4rem ;
+  border-bottom-left-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
 }
 
 .xl{
@@ -57,9 +61,11 @@
 }
 
 .xl:first-child{
-  border-radius: 0.5rem 0.5rem 0 0 ;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 
 .xl:last-child{
-  border-radius: 0 0 0.5rem 0.5rem ;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
